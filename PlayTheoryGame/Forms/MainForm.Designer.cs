@@ -36,8 +36,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.butName = new MaterialSkin.Controls.MaterialButton();
-            this.nameTwo = new MaterialSkin.Controls.MaterialTextBox();
-            this.nameOne = new MaterialSkin.Controls.MaterialTextBox();
+            this.nameTwoBox = new MaterialSkin.Controls.MaterialTextBox();
+            this.nameOneBox = new MaterialSkin.Controls.MaterialTextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.butClear = new MaterialSkin.Controls.MaterialButton();
             this.listBox = new MaterialSkin.Controls.MaterialListBox();
@@ -45,19 +45,10 @@
             this.priceBox = new MaterialSkin.Controls.MaterialTextBox();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.Label2 = new MaterialSkin.Controls.MaterialLabel();
+            this.labelPlayer2 = new MaterialSkin.Controls.MaterialLabel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.Label1 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.price1_2 = new System.Windows.Forms.Label();
-            this.price2_1 = new System.Windows.Forms.Label();
-            this.price2_2 = new System.Windows.Forms.Label();
-            this.answer1_1 = new System.Windows.Forms.Label();
-            this.price1_1 = new System.Windows.Forms.Label();
-            this.answer1_2 = new System.Windows.Forms.Label();
-            this.answer2_1 = new System.Windows.Forms.Label();
-            this.answer2_2 = new System.Windows.Forms.Label();
+            this.labelPlayer1 = new MaterialSkin.Controls.MaterialLabel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.materialTabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
@@ -67,8 +58,7 @@
             this.tableLayoutPanel2.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // imageList1
@@ -136,8 +126,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.butName);
-            this.panel1.Controls.Add(this.nameTwo);
-            this.panel1.Controls.Add(this.nameOne);
+            this.panel1.Controls.Add(this.nameTwoBox);
+            this.panel1.Controls.Add(this.nameOneBox);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
@@ -169,49 +159,49 @@
             this.butName.UseVisualStyleBackColor = false;
             this.butName.Click += new System.EventHandler(this.butName_Click);
             // 
-            // nameTwo
+            // nameTwoBox
             // 
-            this.nameTwo.AnimateReadOnly = false;
-            this.nameTwo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.nameTwo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameTwo.Depth = 0;
-            this.nameTwo.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.nameTwo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.nameTwo.HideSelection = false;
-            this.nameTwo.Hint = "Игрок 2";
-            this.nameTwo.LeadingIcon = null;
-            this.nameTwo.Location = new System.Drawing.Point(15, 130);
-            this.nameTwo.MaxLength = 50;
-            this.nameTwo.MouseState = MaterialSkin.MouseState.OUT;
-            this.nameTwo.Multiline = false;
-            this.nameTwo.Name = "nameTwo";
-            this.nameTwo.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.nameTwo.Size = new System.Drawing.Size(371, 50);
-            this.nameTwo.TabIndex = 1;
-            this.nameTwo.Text = "";
-            this.nameTwo.TrailingIcon = null;
+            this.nameTwoBox.AnimateReadOnly = false;
+            this.nameTwoBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.nameTwoBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameTwoBox.Depth = 0;
+            this.nameTwoBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.nameTwoBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.nameTwoBox.HideSelection = false;
+            this.nameTwoBox.Hint = "Игрок 2";
+            this.nameTwoBox.LeadingIcon = null;
+            this.nameTwoBox.Location = new System.Drawing.Point(15, 130);
+            this.nameTwoBox.MaxLength = 50;
+            this.nameTwoBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.nameTwoBox.Multiline = false;
+            this.nameTwoBox.Name = "nameTwoBox";
+            this.nameTwoBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.nameTwoBox.Size = new System.Drawing.Size(371, 50);
+            this.nameTwoBox.TabIndex = 1;
+            this.nameTwoBox.Text = "";
+            this.nameTwoBox.TrailingIcon = null;
             // 
-            // nameOne
+            // nameOneBox
             // 
-            this.nameOne.AnimateReadOnly = false;
-            this.nameOne.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.nameOne.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.nameOne.Depth = 0;
-            this.nameOne.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.nameOne.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.nameOne.HideSelection = false;
-            this.nameOne.Hint = "Игрок 1";
-            this.nameOne.LeadingIcon = null;
-            this.nameOne.Location = new System.Drawing.Point(15, 14);
-            this.nameOne.MaxLength = 50;
-            this.nameOne.MouseState = MaterialSkin.MouseState.OUT;
-            this.nameOne.Multiline = false;
-            this.nameOne.Name = "nameOne";
-            this.nameOne.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.nameOne.Size = new System.Drawing.Size(371, 50);
-            this.nameOne.TabIndex = 0;
-            this.nameOne.Text = "";
-            this.nameOne.TrailingIcon = null;
+            this.nameOneBox.AnimateReadOnly = false;
+            this.nameOneBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.nameOneBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.nameOneBox.Depth = 0;
+            this.nameOneBox.Font = new System.Drawing.Font("Roboto", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.nameOneBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.nameOneBox.HideSelection = false;
+            this.nameOneBox.Hint = "Игрок 1";
+            this.nameOneBox.LeadingIcon = null;
+            this.nameOneBox.Location = new System.Drawing.Point(15, 14);
+            this.nameOneBox.MaxLength = 50;
+            this.nameOneBox.MouseState = MaterialSkin.MouseState.OUT;
+            this.nameOneBox.Multiline = false;
+            this.nameOneBox.Name = "nameOneBox";
+            this.nameOneBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
+            this.nameOneBox.Size = new System.Drawing.Size(371, 50);
+            this.nameOneBox.TabIndex = 0;
+            this.nameOneBox.Text = "";
+            this.nameOneBox.TrailingIcon = null;
             // 
             // panel4
             // 
@@ -315,11 +305,11 @@
             this.tableLayoutPanel2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.35658F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 74.64342F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.95721F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.04279F));
             this.tableLayoutPanel2.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.panel3, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.panel5, 1, 1);
+            this.tableLayoutPanel2.Controls.Add(this.dataGridView1, 1, 1);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.tableLayoutPanel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.tableLayoutPanel2.Location = new System.Drawing.Point(836, 26);
@@ -333,193 +323,72 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel2.Controls.Add(this.Label2);
+            this.panel2.Controls.Add(this.labelPlayer2);
             this.panel2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.panel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel2.Location = new System.Drawing.Point(163, 3);
+            this.panel2.Location = new System.Drawing.Point(110, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(465, 53);
+            this.panel2.Size = new System.Drawing.Size(518, 53);
             this.panel2.TabIndex = 0;
             // 
-            // Label2
+            // labelPlayer2
             // 
-            this.Label2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.labelPlayer2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.Label2.AutoSize = true;
-            this.Label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.Label2.Depth = 0;
-            this.Label2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
-            this.Label2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
-            this.Label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label2.Location = new System.Drawing.Point(153, 21);
-            this.Label2.MouseState = MaterialSkin.MouseState.HOVER;
-            this.Label2.Name = "Label2";
-            this.Label2.Size = new System.Drawing.Size(135, 24);
-            this.Label2.TabIndex = 0;
-            this.Label2.Text = "materialLabel1";
-            this.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelPlayer2.AutoSize = true;
+            this.labelPlayer2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.labelPlayer2.Depth = 0;
+            this.labelPlayer2.Font = new System.Drawing.Font("Roboto Medium", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel);
+            this.labelPlayer2.FontType = MaterialSkin.MaterialSkinManager.fontType.H6;
+            this.labelPlayer2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelPlayer2.Location = new System.Drawing.Point(153, 21);
+            this.labelPlayer2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelPlayer2.Name = "labelPlayer2";
+            this.labelPlayer2.Size = new System.Drawing.Size(135, 24);
+            this.labelPlayer2.TabIndex = 0;
+            this.labelPlayer2.Text = "materialLabel1";
+            this.labelPlayer2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel3.Controls.Add(this.Label1);
+            this.panel3.Controls.Add(this.labelPlayer1);
             this.panel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.panel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.panel3.Location = new System.Drawing.Point(3, 62);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(154, 337);
+            this.panel3.Size = new System.Drawing.Size(101, 337);
             this.panel3.TabIndex = 1;
             // 
-            // Label1
+            // labelPlayer1
             // 
-            this.Label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.Label1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.Label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.Label1.Location = new System.Drawing.Point(2, -6);
-            this.Label1.Name = "Label1";
-            this.Label1.Size = new System.Drawing.Size(155, 355);
-            this.Label1.TabIndex = 2;
-            this.Label1.Text = "label1";
-            this.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Label1.Paint += new System.Windows.Forms.PaintEventHandler(this.Label1_Paint);
+            this.labelPlayer1.AutoSize = true;
+            this.labelPlayer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
+            this.labelPlayer1.Depth = 0;
+            this.labelPlayer1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.labelPlayer1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.labelPlayer1.Location = new System.Drawing.Point(3, 146);
+            this.labelPlayer1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.labelPlayer1.Name = "labelPlayer1";
+            this.labelPlayer1.Size = new System.Drawing.Size(107, 19);
+            this.labelPlayer1.TabIndex = 5;
+            this.labelPlayer1.Text = "materialLabel1";
             // 
-            // panel5
+            // dataGridView1
             // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.panel5.Controls.Add(this.tableLayoutPanel3);
-            this.panel5.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.panel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.panel5.Location = new System.Drawing.Point(163, 62);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(465, 337);
-            this.panel5.TabIndex = 2;
-            // 
-            // tableLayoutPanel3
-            // 
-            this.tableLayoutPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.tableLayoutPanel3.ColumnCount = 3;
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35.61151F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.38849F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 241F));
-            this.tableLayoutPanel3.Controls.Add(this.price1_2, 0, 2);
-            this.tableLayoutPanel3.Controls.Add(this.price2_1, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.price2_2, 2, 0);
-            this.tableLayoutPanel3.Controls.Add(this.answer1_1, 1, 1);
-            this.tableLayoutPanel3.Controls.Add(this.price1_1, 0, 1);
-            this.tableLayoutPanel3.Controls.Add(this.answer1_2, 2, 1);
-            this.tableLayoutPanel3.Controls.Add(this.answer2_1, 1, 2);
-            this.tableLayoutPanel3.Controls.Add(this.answer2_2, 2, 2);
-            this.tableLayoutPanel3.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.tableLayoutPanel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
-            this.tableLayoutPanel3.RowCount = 3;
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.23077F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.76923F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 153F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(528, 349);
-            this.tableLayoutPanel3.TabIndex = 0;
-            // 
-            // price1_2
-            // 
-            this.price1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.price1_2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.price1_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.price1_2.Location = new System.Drawing.Point(3, 195);
-            this.price1_2.Name = "price1_2";
-            this.price1_2.Size = new System.Drawing.Size(96, 154);
-            this.price1_2.TabIndex = 1;
-            this.price1_2.Text = "label4";
-            this.price1_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // price2_1
-            // 
-            this.price2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.price2_1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.price2_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.price2_1.Location = new System.Drawing.Point(105, 0);
-            this.price2_1.Name = "price2_1";
-            this.price2_1.Size = new System.Drawing.Size(178, 57);
-            this.price2_1.TabIndex = 2;
-            this.price2_1.Text = "label5";
-            this.price2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // price2_2
-            // 
-            this.price2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.price2_2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.price2_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.price2_2.Location = new System.Drawing.Point(289, 0);
-            this.price2_2.Name = "price2_2";
-            this.price2_2.Size = new System.Drawing.Size(173, 57);
-            this.price2_2.TabIndex = 3;
-            this.price2_2.Text = "label6";
-            this.price2_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // answer1_1
-            // 
-            this.answer1_1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.answer1_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.answer1_1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.answer1_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.answer1_1.Location = new System.Drawing.Point(105, 59);
-            this.answer1_1.Name = "answer1_1";
-            this.answer1_1.Size = new System.Drawing.Size(178, 133);
-            this.answer1_1.TabIndex = 4;
-            this.answer1_1.Text = "label3";
-            this.answer1_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // price1_1
-            // 
-            this.price1_1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.price1_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.price1_1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.price1_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.price1_1.Location = new System.Drawing.Point(3, 64);
-            this.price1_1.Name = "price1_1";
-            this.price1_1.Size = new System.Drawing.Size(96, 123);
-            this.price1_1.TabIndex = 0;
-            this.price1_1.Text = "label3";
-            this.price1_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // answer1_2
-            // 
-            this.answer1_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.answer1_2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.answer1_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.answer1_2.Location = new System.Drawing.Point(289, 57);
-            this.answer1_2.Name = "answer1_2";
-            this.answer1_2.Size = new System.Drawing.Size(173, 133);
-            this.answer1_2.TabIndex = 5;
-            this.answer1_2.Text = "label4";
-            this.answer1_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // answer2_1
-            // 
-            this.answer2_1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.answer2_1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.answer2_1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.answer2_1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.answer2_1.Location = new System.Drawing.Point(105, 195);
-            this.answer2_1.Name = "answer2_1";
-            this.answer2_1.Size = new System.Drawing.Size(178, 154);
-            this.answer2_1.TabIndex = 6;
-            this.answer2_1.Text = "label5";
-            this.answer2_1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // answer2_2
-            // 
-            this.answer2_2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
-            this.answer2_2.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.answer2_2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.answer2_2.Location = new System.Drawing.Point(289, 195);
-            this.answer2_2.Name = "answer2_2";
-            this.answer2_2.Size = new System.Drawing.Size(170, 154);
-            this.answer2_2.TabIndex = 7;
-            this.answer2_2.Text = "label6";
-            this.answer2_2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Font = new System.Drawing.Font("Roboto", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dataGridView1.Location = new System.Drawing.Point(110, 62);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.dataGridView1.Size = new System.Drawing.Size(518, 337);
+            this.dataGridView1.TabIndex = 5;
             // 
             // tabPage2
             // 
@@ -558,8 +427,8 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel3.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -573,28 +442,19 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel1;
         private MaterialSkin.Controls.MaterialButton butName;
-        private MaterialSkin.Controls.MaterialTextBox nameTwo;
-        private MaterialSkin.Controls.MaterialTextBox nameOne;
+        private MaterialSkin.Controls.MaterialTextBox nameTwoBox;
+        private MaterialSkin.Controls.MaterialTextBox nameOneBox;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private System.Windows.Forms.Panel panel2;
-        private MaterialSkin.Controls.MaterialLabel Label2;
+        private MaterialSkin.Controls.MaterialLabel labelPlayer2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
         private MaterialSkin.Controls.MaterialListBox listBox;
         private MaterialSkin.Controls.MaterialButton butPriceAddList;
         private MaterialSkin.Controls.MaterialTextBox priceBox;
-        private System.Windows.Forms.Label Label1;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
-        private System.Windows.Forms.Label price1_1;
-        private System.Windows.Forms.Label price1_2;
-        private System.Windows.Forms.Label price2_1;
-        private System.Windows.Forms.Label price2_2;
-        private System.Windows.Forms.Label answer1_1;
-        private System.Windows.Forms.Label answer1_2;
-        private System.Windows.Forms.Label answer2_1;
-        private System.Windows.Forms.Label answer2_2;
         private MaterialSkin.Controls.MaterialButton butClear;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private MaterialSkin.Controls.MaterialLabel labelPlayer1;
     }
 }
 
